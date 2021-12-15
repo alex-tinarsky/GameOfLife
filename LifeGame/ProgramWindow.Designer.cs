@@ -37,7 +37,7 @@ namespace LifeGame
             this.defaultRulesButton = new System.Windows.Forms.Button();
             this.AliveToDeadCheckBox = new System.Windows.Forms.CheckedListBox();
             this.fromDeadToAlive = new System.Windows.Forms.Label();
-            this.fromAliveToDead = new System.Windows.Forms.Label();
+            this.fromAliveToAlive = new System.Windows.Forms.Label();
             this.rules = new System.Windows.Forms.Label();
             this.PlayingField = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -91,7 +91,7 @@ namespace LifeGame
             this.SettingsAndGameSeparator.Panel1.Controls.Add(this.AliveToDeadCheckBox);
             this.SettingsAndGameSeparator.Panel1.Controls.Add(this.DeadToAliveCheckBox);
             this.SettingsAndGameSeparator.Panel1.Controls.Add(this.fromDeadToAlive);
-            this.SettingsAndGameSeparator.Panel1.Controls.Add(this.fromAliveToDead);
+            this.SettingsAndGameSeparator.Panel1.Controls.Add(this.fromAliveToAlive);
             this.SettingsAndGameSeparator.Panel1.Controls.Add(this.rules);
             // 
             // SettingsAndGameSeparator.Panel2
@@ -166,16 +166,16 @@ namespace LifeGame
             this.fromDeadToAlive.Text = "alive <- dead";
             this.fromDeadToAlive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // fromAliveToDead
+            // fromAliveToAlive
             // 
-            this.fromAliveToDead.AutoSize = true;
-            this.fromAliveToDead.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fromAliveToDead.Location = new System.Drawing.Point(51, 84);
-            this.fromAliveToDead.Name = "fromAliveToDead";
-            this.fromAliveToDead.Size = new System.Drawing.Size(180, 38);
-            this.fromAliveToDead.TabIndex = 1;
-            this.fromAliveToDead.Text = "alive -> dead";
-            this.fromAliveToDead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fromAliveToAlive.AutoSize = true;
+            this.fromAliveToAlive.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fromAliveToAlive.Location = new System.Drawing.Point(51, 84);
+            this.fromAliveToAlive.Name = "fromAliveToAlive";
+            this.fromAliveToAlive.Size = new System.Drawing.Size(175, 38);
+            this.fromAliveToAlive.TabIndex = 1;
+            this.fromAliveToAlive.Text = "alive -> alive";
+            this.fromAliveToAlive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rules
             // 
@@ -226,7 +226,7 @@ namespace LifeGame
         private System.Windows.Forms.PictureBox PlayingField;
         private System.Windows.Forms.CheckedListBox DeadToAliveCheckBox;
         private System.Windows.Forms.Label fromDeadToAlive;
-        private System.Windows.Forms.Label fromAliveToDead;
+        private System.Windows.Forms.Label fromAliveToAlive;
         private System.Windows.Forms.Label rules;
         private System.Windows.Forms.CheckedListBox AliveToDeadCheckBox;
         private System.Windows.Forms.Button defaultRulesButton;
