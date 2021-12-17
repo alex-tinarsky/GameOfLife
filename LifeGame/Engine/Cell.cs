@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LifeGame.Engine
+﻿namespace LifeGame.Engine
 {
     class Cell
     {

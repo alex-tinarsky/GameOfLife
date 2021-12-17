@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace LifeGame.Config
 {
     struct DefaultMapSettings
     {
-        static readonly int PixelSize = 4;
+        public const int Resolution = 20;
+        public const int Density = 5;
+        public static readonly Brush СellsBrush = Brushes.DarkViolet;
+        public static readonly Brush BackgrondBrush = Brushes.Black;
     }
 }
