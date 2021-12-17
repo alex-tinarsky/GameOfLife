@@ -58,10 +58,10 @@ namespace LifeGame.Engine
             return mapToPrint;
         }
 
-        public void ChangeStateOfCellOnMap(int x, int y)
+        public void ChangeStateOfCellOnMap(int x, int y, bool state)
         {
             var cell = _map[y, x];
-            cell.IsAlive = !cell.IsAlive;
+            cell.IsAlive = state;
             AddCellWithNeighborsToCheck(cell);
         }
 
@@ -97,6 +97,11 @@ namespace LifeGame.Engine
             {
                 for (int x = cell.X - 1; x <= cell.X + 1; x++)
                 {
+                    if ((x < 0 || x >= MapWidth) || (y < 0 || y >= MapHeight))
+                    {
+                        continue;
+                    }
+
                     _cellsToCheckInNextGeneration.Add(
                         _map[(y + MapHeight) % MapHeight, (x + MapWidth) % MapWidth]);
                 }
@@ -117,6 +122,11 @@ namespace LifeGame.Engine
                 for (int x = cell.X - 1; x <= cell.X + 1; x++)
                 {
                     if (x == cell.X && y == cell.Y)
+                    {
+                        continue;
+                    }
+
+                    if ((x < 0 || x >= MapWidth) || (y < 0 || y >= MapHeight))
                     {
                         continue;
                     }
